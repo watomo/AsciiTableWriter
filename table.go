@@ -23,8 +23,11 @@ type Table struct {
 	colSize       int
 }
 
-func NewTable() *Table {
-	t := &Table{}
+func NewTable(headerList []string, bodyList [][]string) *Table {
+	t := &Table{
+		bodyList: bodyList,
+		headerList: headerList,
+	}
 	return t
 }
 
