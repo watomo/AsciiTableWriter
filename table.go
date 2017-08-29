@@ -109,8 +109,6 @@ func (t *Table) parseSeparator() {
 		for i, v := range rows {
 			separator := separatorList[i]
 			wordSize := utf8.RuneCountInString(v)
-			//数値→文字列変換
-			//fmt.Println("wordSize:"+strconv.Itoa(wordSize))
 			if wordSize > separator {
 				separatorList[i] = wordSize
 			}
